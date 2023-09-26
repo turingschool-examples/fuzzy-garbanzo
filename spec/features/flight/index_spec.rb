@@ -49,8 +49,6 @@ RSpec.describe "Flight Index" do
 
           expect(current_path).to eq(flights_path)
 
-          save_and_open_page
-
           expect(page).to have_content(@passanger_1.name)
           expect(page).not_to have_content("Megumi Flight 67890")
           expect(page).to have_content(@passanger_3.name)
