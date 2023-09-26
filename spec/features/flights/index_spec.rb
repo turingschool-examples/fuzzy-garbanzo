@@ -87,7 +87,6 @@ RSpec.describe "the flights index page" do
     visit "/flights"
     click_button ("Remove Alfred from #{flight_1.number}")
 
-    save_and_open_page
 
     expect(page).to have_content(alfred.name, :count => 2)
     expect(page).to have_content(bert.name)
