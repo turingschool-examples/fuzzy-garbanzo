@@ -3,4 +3,8 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+
+  resources :flights, only: [:index]
+
+  delete "/flights/:flight_id/passangers/:passanger_id", to: "flight_passangers#destroy"
 end
