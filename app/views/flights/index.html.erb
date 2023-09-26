@@ -6,6 +6,6 @@
   <p>All Passengers: </p>
   <% flight.passengers.each do |passenger| %>
     <p> <%= passenger.name %> </p>
-    <%= button_to "Remove Passenger", "flights/passengers/#{passenger.id}", method: :delete, data: {turbo: false} %>
+    <%= button_to "Remove #{passenger.name} from #{flight.number}", flight_passenger_path(flight,passenger), method: :delete, data: {turbo: false} %>
   <% end %>
 <% end %>
