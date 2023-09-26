@@ -23,8 +23,7 @@ RSpec.describe "the airline show page" do
     FlightPassenger.create(flight: flight_3, passenger: carol)
 
     visit "/airlines/#{southwest.id}"
-    
-    save_and_open_page
+
 
     expect(page).to have_content(carol.name, :count => 1)
     expect(page).to have_content(dean.name, :count => 1)
